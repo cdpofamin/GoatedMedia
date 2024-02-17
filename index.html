@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOATED Media</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="wholepage">
+    <div class="navbar">
+        <div class="logo"><a href="#openingTitle">GOATED Media</a></div>
+        <ul class="links">
+            <li><a href="#abt">ABOUT</a></li> <!-- Link to the ABOUT section -->
+            <li><a href="#legacy">LEGACY</a></li> <!-- Link to the LEGACY section -->
+            <li><a href="#timelines">TIMELINE</a></li>
+            <li><a href="#championships">CHAMPIONSHIPS</a></li>
+        </ul>
+    </div>
+
+    <div class="fullcontainer" id="about">
+        <div class="page1">
+            <div class="openingTitle" id="openingTitle"> <!-- Add id attribute -->
+                <h1> KING JAMES: THE CHOSEN ONE</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="abt" id="abt">
+        <div class="abt-box">
+            <h2>Biography:</h2>
+            <p>LeBron James, born on December 30, 1984, in Akron, Ohio, grew up facing adversity in his early life. Raised by his single mother, Gloria James, LeBron faced challenges typical of inner-city life, including poverty and instability. Despite these obstacles, LeBron discovered his passion for basketball at a young age. His exceptional talent quickly became apparent, and he garnered attention while playing for St. Vincent-St. Mary High School in Akron, where he achieved national recognition and became one of the most hyped high school basketball players in history. LeBron's rise to fame in basketball was marked by his remarkable athleticism, versatility, and basketball IQ, leading to his decision to forgo college and enter the NBA Draft in 2003.</p>
+        </div>
+    </div>
+    
+    <div class="legacy" id="legacy">
+        <div class="legacy-box">
+            <h2>Career Highlights</h2>
+            <p>LeBron James has amassed a plethora of career achievements and accolades throughout his illustrious NBA career. He has won four NBA championships (2012, 2013, 2016, 2020), earning NBA Finals MVP honors in each of those victories. Additionally, LeBron has been named the NBA Most Valuable Player (MVP) four times (2009, 2010, 2012, 2013) and has been selected to the NBA All-Star team numerous times, earning All-Star Game MVP honors on multiple occasions. LeBron has also represented the United States in the Olympics, winning gold medals in 2008, 2012, and 2016.</p>
+        </div>
+    </div>
+
+    <div class="timelines" id="timelines">
+        <div class="timeline-box">
+            <h2>TIMELINE</h2>
+            <p>LeBron James's career timeline is a testament to his enduring success and impact on the NBA. From his early days as a highly touted high school prospect to his tenure with multiple NBA teams, including the Cleveland Cavaliers, Miami Heat, and Los Angeles Lakers, LeBron has left an indelible mark on the league. Key moments in his timeline include his NBA debut in 2003, his first NBA championship in 2012, his return to Cleveland in 2014, and his historic NBA title with the Lakers in 2020. LeBron's journey is a testament to his dedication, resilience, and unwavering pursuit of greatness.
+            </p>
+        </div>
+    </div>
+
+    <div class="championships" id="championships">
+        <div class="championships-box">
+            <h2>CHAMPIONSHIPS</h2>
+            <p>LeBron James's journey through different NBA teams has been marked by success, challenges, and triumphs. He began his NBA career with the Cleveland Cavaliers, where he quickly became the face of the franchise and led the team to its first NBA Finals appearance in 2007. In 2010, LeBron made a highly publicized move to the Miami Heat, forming a dynamic trio with Dwyane Wade and Chris Bosh and winning two NBA championships in 2012 and 2013. After returning to Cleveland and delivering the Cavaliers their first NBA championship in 2016, LeBron joined the Los Angeles Lakers in 2018, where he continued to add to his legacy by leading the team to an NBA title in 2020. Throughout his tenure with each team, LeBron's impact on and off the court has been profound, cementing his status as a basketball icon.
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
