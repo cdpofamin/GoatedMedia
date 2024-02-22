@@ -1,5 +1,11 @@
-* {
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
@@ -13,11 +19,11 @@ li {
     height: 4000px;
     background-color: #000;
 }
+
 @media (max-width: 600px){
     .wholepage {
         width: 100%;
     }
-
 }
 
 .openingTitle h1 {
@@ -25,7 +31,6 @@ li {
     font-size: 70px;
     text-align: center;
     color: #ffffff;
- 
 }
 
 a {
@@ -95,11 +100,6 @@ header {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-}
-
 .page2 {
 }
 
@@ -125,6 +125,8 @@ h1 {
 
 .abt {
     background-image: url(https://i.pinimg.com/564x/ed/8e/da/ed8edaaba91a1924f1688ff495fbd808.jpg);
+    background-position: center;
+    background-size: cover;
     display: grid;
     background-repeat: no-repeat;
     align-items: top;
@@ -138,11 +140,9 @@ h1 {
 }
 
 .abt-box {
-    width: 60%;
     height: auto;
-    margin-left: 600px;
-    margin-right: 200px;
     margin-bottom: 300px;
+    margin-inline: 50px;
     background-color: #070707cc;
     border-radius: 1px;
     padding: 20px;
@@ -157,18 +157,19 @@ h1 {
     font-family: "Audiowide";
 }
 
+
 .abt-box p {
     font-size: 1.5rem;
     font-family: "Roboto";
 }
 
 .legacy {
-
+    height: auto;
     background-color: #000;
     background-image: url(https://i.pinimg.com/564x/cd/27/1e/cd271ee841ce5d5590f7e1be5f20e90b.jpg);
-    background-position: right;
-    display: grid;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     align-items: top;
     margin-top: 120px;
     margin-left: 20px;
@@ -179,11 +180,11 @@ h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
 .legacy-box {
-    width: 60%;
-    height: auto;
-    margin-left: 0; /* Adjust margin-left to 0 */
-    margin-right: auto; /* Adjust margin-right to auto */
+    height:auto;
+    margin-inline: 50px;
     margin-bottom: 300px;
     background-color: #070707cc;
     border-radius: px;
@@ -204,28 +205,23 @@ h1 {
 }
 
 .timelines {
-
+    height: auto;
     background-color: #000;
-    background-image: url(https://i.pinimg.com/564x/5a/a1/67/5aa16708adafcc88904e28d3ca9a39a0.jpg);
-    background-position: left;
-    display: grid;
+    background-image: url(https://i.pinimg.com/564x/cd/27/1e/cd271ee841ce5d5590f7e1be5f20e90b.jpg);
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     align-items: top;
-    margin-top: 50px;
+    margin-top: 120px;
     margin-left: 20px;
     margin-right: 20px;
     height: 630px;
-    
     padding-top: 90px;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .timeline-box {
-    width: 60%;
-    height: auto;
-    margin-left: auto; /* Set margin-left to auto */
-    margin-right: 0; /* Set margin-right to 0 */
-    margin-bottom: 300px;
+    margin-inline: 50px;
     background-color: #070707cc;
     border-radius: px;
     padding: 20px;
@@ -246,27 +242,27 @@ h1 {
 }
 
 .championships {
-
+    height: auto;
     background-color: #000;
-    background-image: url(https://i.pinimg.com/564x/21/8a/1f/218a1f1f33396a9322644a9768342314.jpg);
-    background-position: right;
-    display: grid;
+    background-image: url(https://i.ytimg.com/vi/YKQs3skw358/maxresdefault.jpg);
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     align-items: top;
-    margin-top: 50px;
+    margin-top: 120px;
     margin-left: 20px;
     margin-right: 20px;
     height: 630px;
-    
     padding-top: 90px;
     color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+
 .championships-box {
-    width: 60%;
-    height: auto;
-    margin-left: 0; /* Set margin-left to 0 */
-    margin-right: auto; /* Set margin-right to auto */
+    height:auto;
+    margin-inline: 50px;
     margin-bottom: 300px;
     background-color: #070707cc;
     border-radius: px;
@@ -274,8 +270,6 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: solid white;
 }
-
-
 
 .championships-box h2 {
     margin-bottom: 10px;
@@ -286,4 +280,20 @@ h1 {
 .championships-box p {
     font-size: 1.5rem;
     font-family: "Roboto";
+}
+
+@media screen and (max-width: 600px) {
+    .abt-box p,
+    .legacy-box p,
+    .timeline-box p,
+    .championships-box p {
+        font-size: 15px;
+    }
+
+    .abt-box h2,
+    .legacy-box h2,
+    .timeline-box h2,
+    .championships-box h2 {
+        font-size: 25px;
+    }
 }
