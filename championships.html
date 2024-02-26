@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="championships.css">
+</head>
+<body>
+    <a href="index.html" class="home-button">HOME</a>
+    <div class="wholepage5">
+        <h1 class="title">LEBRON'S CHAMPIONSHIP RUNS</h1>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://www.reviewjournal.com/wp-content/uploads/2013/06/8622749-2-150007.jpg?w=640" alt="Image 1" style="align-items: center; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                </div>
+                <div class="slide">
+                    <img src="https://s.yimg.com/ny/api/res/1.2/KjgYqK93qpt_t4AVT1GnEQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM5NA--/https://media.zenfs.com/en/lebron_wire_usa_today_sports_articles_234/768c502997a3476ea713c1b97b5ea16b" alt="Image 2" style="align-items: center; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                </div>
+                <div class="slide">
+                    <img src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_md/f_auto/primary/phe5wffth90bg7mz8nlh" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="https://s3.amazonaws.com/si-fl-wp/wp-content/uploads/20181111152143/lebronjames-2-600x350.jpg" alt="Image 4">
+                </div>
+             
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <div class="text-container">
+            <div class="text" id="text1" style="display: none;">
+                <h2>Miami Heat Era (2011-2014):</h2>
+                <ul>
+                    <li>LeBron James joined the Miami Heat in 2010, forming a formidable "Big Three" alongside Dwyane Wade and Chris Bosh.</li>
+                    <li>In 2012, LeBron led the Heat to their first NBA Championship since 2006, defeating the Oklahoma City Thunder in the Finals. LeBron's stellar performance earned him the NBA Finals MVP award.</li>
+                    <li>The following year, in 2013, LeBron and the Heat captured their second consecutive NBA Championship by defeating the San Antonio Spurs in a thrilling seven-game series. LeBron once again earned Finals MVP honors.</li>
+                    <li>LeBron's tenure with the Heat showcased his dominance as he reached the NBA Finals in all four seasons he played with the team, solidifying his status as one of the league's premier players.</li>
+                </ul>
+            </div>
+            <div class="text" id="text2" style="display: none;">
+                <h2>Return to Cleveland (2014-2018):</h2>
+                <ul>
+                    <li>LeBron made a highly-publicized return to the Cleveland Cavaliers in 2014, aiming to bring a championship to his hometown.</li>
+                    <li>In 2016, LeBron achieved his goal by leading the Cavaliers to their first-ever NBA Championship. In a historic comeback, the Cavaliers overcame a 3-1 series deficit against the record-setting Golden State Warriors, with LeBron delivering remarkable performances throughout the Finals. He was unanimously named the NBA Finals MVP.</li>
+                    <li>Despite facing formidable competition from the Warriors in subsequent years, LeBron guided the Cavaliers to three consecutive NBA Finals appearances from 2015 to 2018, showcasing his leadership and unparalleled skill on the court.</li>
+                </ul>
+            </div>
+            <div class="text" id="text3" style="display: none;">
+                <h2>Los Angeles Lakers (2018-Present)</h2>
+                <ul>
+                    <li>LeBron James signed with the Los Angeles Lakers in 2018, aiming to revitalize the historic franchise.</li>
+                    <li>In 2020, LeBron led the Lakers to their 17th NBA Championship, tying the Boston Celtics for the most championships in NBA history. The Lakers defeated the Miami Heat in the NBA Finals, with LeBron earning his fourth NBA Finals MVP award for his instrumental role in the team's success.</li>
+                    <li>LeBron's tenure with the Lakers has been marked by his continued excellence and leadership, as he strives to add to his legacy while competing at the highest level.</li>
+                </ul>
+            </div>
+            <div class="text" id="text4" style="display: none;">
+                <h2>LeBron James: GOATED</h2>
+                <ul>
+                    <li>Throughout his career, LeBron James has exemplified extraordinary talent, versatility, and basketball IQ, earning him a place among the pantheon of basketball legends. His four championship runs serve as testaments to his unmatched impact on the game of basketball.</li>
+                    
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlide() {
+            const slides = document.querySelectorAll('.slide');
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            } else if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            const offset = -slideIndex * 100;
+            document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+            const textElements = document.querySelectorAll('.text');
+            textElements.forEach((textElement, index) => {
+                if (index === slideIndex) {
+                    textElement.style.display = 'block';
+                } else {
+                    textElement.style.display = 'none';
+                }
+            });
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlide();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlide();
+        }
+
+        showSlide();
+    </script>
+</body>
+</html>

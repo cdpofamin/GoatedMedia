@@ -1,0 +1,191 @@
+body {
+    background-color: black;
+}
+.wholepage2 {
+    display: flex;
+    flex-direction: block;
+    height: 100vh; 
+    background-color: #000;
+}
+.home-button {
+    font-size: 1.3vw;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999; 
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 25%, 98%);
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-family: "Audiowide"
+    
+}
+
+
+.home-button:hover {
+    background-color: hwb(0 5% 23%); 
+    color: hsl(0, 0%, 100%); 
+}
+
+.header {
+    height: 30px;
+    background-color: #000;
+}
+
+.section {
+    flex: 1; 
+    background-color: #0e0b0b;
+    border: solid 1px white;
+}
+#section1 {
+    color: white;
+    background-image: url(https://i.redd.it/sopzzccqt0l81.jpg);
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+}
+#section1box {
+    margin-inline: 50px;
+    background-color: #070707cc;
+    border-radius: 1px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: solid white;
+    margin-top: 300px;
+}
+
+#section1box h2 {
+    margin-bottom: 10px;
+
+    font-family: "Audiowide";
+}
+
+
+#section1box p {
+    font-family: "Roboto";
+}
+
+#section2 {
+    color: white;
+    background-image: url(https://www.oregonlive.com/resizer/rpk7FnF2PvUwaX8GGAk78rn9UpM=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/SD35VXZYMVFEDJFUV4JY46GNYQ.jpg);
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#section2box {
+    margin-inline: 50px;
+    background-color: #070707cc;
+    border-radius: 1px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: solid white;
+    margin-top: 300px;
+
+}
+
+#section2box h2 {
+    margin-bottom: 10px;
+    font-family: "Audiowide";
+}
+
+
+#section2box p {
+    font-family: "Roboto";
+}
+#section3 {
+    color: white;
+    background-image: url(https://i.pinimg.com/736x/57/d6/ae/57d6aee06191c77ebd4d28e1e49c885c.jpg);
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+#section3box {
+    margin-inline: 50px;
+    background-color: #070707cc;
+    border-radius: 1px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: solid white;
+    margin-top: 300px;
+
+}
+
+#section3box h2 {
+    margin-bottom: 10px;
+    font-family: "Audiowide";
+}
+
+
+#section3box p {
+    font-size: 1em;
+    font-family: "Roboto";
+}
+#section4 {
+    color: white;
+    background-image: url(https://nypost.com/wp-content/uploads/sites/2/2023/07/lebron_promise3.jpg);
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+}
+#section4box {
+    margin-inline: 50px;
+    background-color: #070707cc;
+    border-radius: 1px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: solid white;
+    margin-top: 270px;
+
+}
+
+#section4box h2 {
+    margin-bottom: 10px;
+    font-size: 2;
+    font-family: "Audiowide";
+}
+
+
+#section4box p {
+    font-family:"Roboto";
+}
+
+@media screen and (max-width: 1085px) {
+    .wholepage2 {
+        flex-direction: column; 
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    #section1box p,
+    #section2box p,
+    #section3box p,
+    #section4box p {
+        font-size: 10.5px; 
+    }
+
+    #section1box h2,
+    #section2box h2,
+    #section3box h2,
+    #section4box h2 {
+        font-size: 18px; 
+    }
+}   
+#section1box,
+#section2box,
+#section3box,
+#section4box {
+    transition: transform 0.3s ease;
+}
+
+
+#section1box:hover,
+#section2box:hover,
+#section3box:hover,
+#section4box:hover {
+    transform: translateY(-10px);  
+}

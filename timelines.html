@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="timelines.css">
+</head>
+<body>
+    <a href="index.html" class="home-button">HOME</a>
+    <div class="wholepage4">
+        <h1 class="title">LEBRON'S TIMELINE</h1>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://staticg.sportskeeda.com/editor/2022/12/f3370-16716839170730-1920.jpg?w=840" alt="Image 1" style="align-items: center; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                </div>
+                <div class="slide">
+                    <img src="https://fivethirtyeight.com/wp-content/uploads/2015/06/warriors-cavaliers-basketball.jpg?w=575" alt="Image 2" style="align-items: center; background-position: center; background-size: cover; background-repeat: no-repeat;">
+                </div>
+                <div class="slide">
+                    <img src="https://cdn.nba.com/teams/legacy/www.nba.com/heat/sites/heat/files/legacy/main_photo/600_lebronhooks_121120.jpg" alt="Image 3">
+                </div>
+                <div class="slide">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/263/842/476/lebron-james-basketball-4k-nba-wallpaper-preview.jpg" alt="Image 4">
+                </div>
+                <div class="slide">
+                    <img src="https://sportsmax.tv/media/k2/items/cache/ddf205b42311b97197ac04c4c1ffa0d4_XL.jpg" alt="Image 5">
+                </div>
+             
+            </div>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <div class="text-container">
+            <div class="text" id="text1" style="display: none;">
+                <h2>Part 1: Early Career and Rookie Seasons (2003-2006)</h2>
+                <ul>
+                    <li>2003: LeBron James is selected as the first overall pick in the NBA Draft by the Cleveland Cavaliers, straight out of St. Vincent-St. Mary High School in Akron, Ohio.</li>
+                    <li>2004: LeBron makes an immediate impact, winning the NBA Rookie of the Year award. He averaged 20.9 points, 5.5 rebounds, and 5.9 assists per game during his rookie season.</li>
+                    <li>2005: Earns his first NBA All-Star selection, becoming the youngest All-Star starter in NBA history at 20 years old.</li>
+                    <li>2006: Despite missing the playoffs, LeBron continues to excel individually, earning All-NBA Second Team honors while averaging 31.4 points, 7 rebounds, and 6.6 assists per game.</li>
+                </ul>
+            </div>
+            <div class="text" id="text2" style="display: none;">
+                <h2>Part 2: Establishing Dominance in Cleveland (2007-2010)</h2>
+                <ul>
+                    <li>2007: LeBron carries the Cleveland Cavaliers to their first NBA Finals appearance in franchise history but falls to the San Antonio Spurs. He earns his second All-Star Game MVP award.</li>
+                    <li>2008: LeBron wins his first NBA Most Valuable Player (MVP) award, averaging 30.0 points, 7.9 rebounds, and 7.2 assists per game.</li>
+                    <li>2009: Secures his second consecutive MVP award, joining elite company in NBA history.</li>
+                    <li>2010: Despite another outstanding regular season, LeBron and the Cavaliers face playoff disappointment, bowing out in the second round. He claims his third straight MVP award, becoming the youngest player in NBA history to do so.</li>
+                </ul>
+            </div>
+            <div class="text" id="text3" style="display: none;">
+                <h2>Part 3: Miami Heat Era (2010-2014)</h2>
+                <ul>
+                    <li>2010: LeBron's decision to join the Miami Heat, famously announced in "The Decision," marks a pivotal moment in his career.</li>
+                    <li>2012: LeBron wins his first NBA Championship and Finals MVP, defeating the Oklahoma City Thunder in the Finals. He captures his third MVP award.</li>
+                    <li>2013: Leads the Miami Heat to a second consecutive NBA Championship, earning Finals MVP honors once again.</li>
+                    <li>2014: After four successful seasons in Miami, LeBron opts out of his contract and returns to the Cleveland Cavaliers.</li>
+                </ul>
+            </div>
+            <div class="text" id="text4" style="display: none;">
+                <h2>Part 4: Return to Cleveland and Championship Glory (2014-2018)</h2>
+                <ul>
+                    <li>2016: In an epic comeback, LeBron helps the Cavaliers win their first NBA Championship, overcoming a 3-1 series deficit against the Golden State Warriors in the Finals. He delivers on his promise to bring a title to Cleveland and earns his third Finals MVP award.</li>
+                    <li>2017: Continues to dominate, earning his 13th consecutive All-Star selection and winning the All-Star MVP award for the third time.</li>
+                    <li>2018: Despite a valiant effort, the Cavaliers fall short in the NBA Finals against the Warriors. LeBron averages a triple-double for the series but is unable to secure another championship for Cleveland.</li>
+                </ul>
+            </div>
+            <div class="text" id="text5" style="display: none;">
+                <h2>Part 5: Later Career Achievements (2018-Present)</h2>
+                <ul>
+                    <li>2018: LeBron signs with the Los Angeles Lakers, aiming to revive the storied franchise.</li>
+                    <li>2020: Leads the Lakers to an NBA Championship in the Orlando Bubble, earning his fourth NBA Finals MVP award.</li>
+                    <li>2021: Named to the All-NBA First Team for the 17th time in his career, tying the record for most selections.</li>
+                    <li>2022: Surpasses Kareem Abdul-Jabbar to become the NBA's all-time leader in points scored, solidifying his legacy as one of the greatest scorers in league history.</li>
+                    <li>Ongoing: LeBron continues to defy age, competing at a high level and chasing further individual and team success as he cements his place among basketball legends.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlide() {
+            const slides = document.querySelectorAll('.slide');
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1;
+            } else if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            const offset = -slideIndex * 100;
+            document.querySelector('.slider').style.transform = `translateX(${offset}%)`;
+            const textElements = document.querySelectorAll('.text');
+            textElements.forEach((textElement, index) => {
+                if (index === slideIndex) {
+                    textElement.style.display = 'block';
+                } else {
+                    textElement.style.display = 'none';
+                }
+            });
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlide();
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlide();
+        }
+
+        showSlide();
+    </script>
+</body>
+</html>
